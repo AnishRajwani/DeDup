@@ -1,9 +1,10 @@
 import requests
 import streamlit as st
 import json
+import pandas as pd
 
-# url = "http://demo.vdalive.com/api/"
-url = "http://52.136.118.157//api/"
+url = "http://demo.vdalive.com/api/"
+# url = "http://52.136.118.157//api/"
 headers = {
   'Content-Type': 'application/json',
   'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGZkEtVWpyZzlEVnFLS09MWGttcE1YMlRSUkYxWEdUbVZKQS1GZmVQUDFvIn0.eyJleHAiOjE2OTEzOTAzMDksImlhdCI6MTY5MTM5MDAwOSwiYXV0aF90aW1lIjoxNjkxMzg5OTE1LCJqdGkiOiIzM2E2ZTlhNi1kMDVmLTQ3YjMtOTcxMi1lOTUyNTVjMDBjMzciLCJpc3MiOiJodHRwOi8vNTIuMTM2LjExOC4xNTc6ODA4MC9yZWFsbXMvc3NtLXRvb2wiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMmE4M2E5NTUtMDZlNi00ZjkzLWJlZGQtMmUzNWFmZWYyNGMzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic3NtLXVpIiwibm9uY2UiOiJiN2RkMDU1MC03NzFjLTRjM2MtODdmNC1iZmZhMTk1NjM5MmMiLCJzZXNzaW9uX3N0YXRlIjoiMjMxNDJmNWYtNDIxMS00ODY1LWIwNGUtZWQxZWUzZTQyYzA1IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vNTIuMTM2LjExOC4xNTciXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlNVUEVSQURNSU4iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zc20tdG9vbCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJzaWQiOiIyMzE0MmY1Zi00MjExLTQ4NjUtYjA0ZS1lZDFlZTNlNDJjMDUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ3aGl0ZWtsYXkgd2hpdGVrbGF5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoid2hpdGVrbGF5IiwiZ2l2ZW5fbmFtZSI6IndoaXRla2xheSIsImZhbWlseV9uYW1lIjoid2hpdGVrbGF5In0.LIfgnRqcPea060ZEbddkgyjRP7vtWOAkB3cyXMPJefJPNw9RiIJL6FAF0eE5ZMvHCc9pL6rBLzjnEIMYdPDN0C0HPdgT6QiquIhWGlmY6y3IYawEUuW8gZd6oHZEkGnlk3cubQJP21q26gJVFb372q3Gyzoqbz0eD2Jc7IVdtVjrubYYB_4-V5FFydatfzuxS656WdirvjEuCMv3Rnw_S4scSt11dZEkIByfQ2iLHtLuNab8-A5gam3Om6A7yuMciQVb0iixbaThGcKYX1q8bIeh9GOnU6JZ3-KlAaaV2niHyIIWSEIPqu19-9mD8_AIdIevndSYX63kN60-VbsRYg'
@@ -155,6 +156,15 @@ if selected_data_source_1 != "Select" and selected_data_source_2 != "Select":
                         "threshold_match_probability": threshold_match_probability
                     }
                     # st.write(conf_dic)
+                    # temp = pd.DataFrame(conf_dic)
+                    # st.table(temp)
+
+                    #call your function
+
+                    #use result variable to store your dataframe
+
+                    #uncomment the below line it will print the table
+                    # st.table(result)
 else:
     st.write("Please select Datasoruces")
 
